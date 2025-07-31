@@ -7,6 +7,7 @@
     <title>New message</title>
   </head>
   <body>
+    <%- include('navBar', links); %>
     <h1>New message</h1>
     <form method="POST" action="/new">
       <label>User name: <input type="text" name="user" id="user" /></label>
