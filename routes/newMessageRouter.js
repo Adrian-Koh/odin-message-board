@@ -9,7 +9,8 @@ newMessageRouter.get("/", (req, res) => {
 
 newMessageRouter.post("/", (req, res) => {
   const { user, text } = req.body;
-  messages.push({ user, text, added: new Date() });
+  const newId = messages[messages.length - 1].id + 1;
+  messages.push({ id: newId, user, text, added: new Date() });
   res.redirect("/");
 });
 

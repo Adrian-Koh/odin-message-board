@@ -23,3 +23,7 @@ a:visited,
 a {
   color: rgb(43, 145, 102);
 }
+
+.messages li {
+  margin-bottom: 5px;
+}
