@@ -8,17 +8,20 @@
   </head>
   <body>
     <%- include('navBar', links); %>
-    <h1><%= title %></h1>
-    <ul class="messages">
-      <% for (const message of messages) { %>
-        <li>
-            [<%= message.added.toLocaleDateString() %>, 
-            <%= message.added.toLocaleTimeString() %>] 
-            <%= message.user %> says: 
-            <%= message.text %>
-            <a href="/message/<%= message.id %>">Open</a>
-        </li>
-      <% } %>
-    </ul>
+    <div class="message-container">
+      <div class="message">
+        <h1><%= title %></h1>
+          <ul class="home-messages">
+            <% for (const message of messages) { %>
+              <li>
+                  <%= message.user %> says: 
+                  <%= message.text %>
+                  <a href="/message/<%= message.id %>" class="open">Open</a>
+              </li>
+            <% } %>
+          </ul>
+      </div>
+    </div>
+    
   </body>
 </html>

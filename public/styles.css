@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap");
+
+html {
+  font-family: "Hahmlet", serif;
+}
+
 h1 {
   text-align: center;
 }
@@ -19,11 +25,48 @@ a {
   text-decoration: none;
 }
 
-a:visited,
-a {
+.navbar-link:visited,
+.navbar-link {
   color: rgb(43, 145, 102);
+  font-weight: 500;
 }
 
-.messages li {
-  margin-bottom: 5px;
+.home-messages {
+  list-style-type: none;
+  padding: 0;
+}
+
+.home-messages li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: solid 1px coral;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 2px coral;
+  display: flex;
+  gap: 5px;
+}
+
+.message {
+  width: 500px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.open {
+  margin-left: auto;
+  align-self: center;
+}
+
+.open,
+.open:visited {
+  color: rgb(206, 71, 23);
+}
+
+.message-text {
+  font-size: 1.5rem;
+  font-weight: 500;
 }

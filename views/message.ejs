@@ -8,8 +8,13 @@
   </head>
   <body>
     <%- include('navBar', links); %>
-    <h1><%= text %></h1>
-    <p>Author: <%= user %></p>
-    <p>Added: <%= added %></p>
+    <div class="message-container">
+      <div class="message">
+        <h1 class="message-text"><%= text %></h1>
+        <p>Author: <%= user %></p>
+        <p>Date: <%= added.toLocaleDateString() %></p>
+        <p>Time: <%= added.toLocaleTimeString() %></p>
+      </div>
+    </div>
   </body>
 </html>
