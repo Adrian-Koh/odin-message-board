@@ -10,7 +10,9 @@
     <%- include('navBar', links); %>
     <h1>New message</h1>
     <form method="POST" action="/new">
-      <label>User name: <input type="text" name="user" id="user" /></label>
+      <label
+        >User name: <input type="text" name="username" id="username"
+      /></label>
       <label>Message: <textarea name="text" id="text"></textarea></label>
       <input type="submit" />
     </form>
