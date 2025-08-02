@@ -10,10 +10,10 @@
     <%- include('navBar', links); %>
     <div class="message-container">
       <div class="message">
-        <h1 class="message-text"><%= text %></h1>
-        <p>Author: <%= username %></p>
-        <p>Date: <%= added.toLocaleDateString() %></p>
-        <p>Time: <%= added.toLocaleTimeString() %></p>
+        <h1 class="message-text"><%= message.text %></h1>
+        <p>Author: <%= message.username %></p>
+        <p>Date: <%= message.added.toLocaleDateString() %></p>
+        <p>Time: <%= message.added.toLocaleTimeString() %></p>
       </div>
     </div>
   </body>
