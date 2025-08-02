@@ -18,7 +18,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: `postgresql://${process.env.DATABASE_USERNAME}:${process.env.DATABASE_PASSWORD}@maglev.proxy.rlwy.net:35493/railway`,
+    connectionString: `postgresql://${process.env.PGUSER}:${process.env.PGPASSWORD}@maglev.proxy.rlwy.net:35493/railway`,
   });
   await client.connect();
   await client.query(SQL);
