@@ -1,14 +1,17 @@
 const { Router } = require("express");
 const indexRouter = Router();
-const messages = require("../messages");
+const db = require("../db/queries");
 const links = require("../links");
 
-indexRouter.get("/", (req, res) => {
+async function getMessages(req, res) {
+  const messages = await db.getAllMessages();
   res.render("index", {
     title: "Mini Messageboard",
     messages,
     links,
   });
-});
+}
+
+indexRouter.get("/", getMessages);
 
 module.exports = indexRouter;

@@ -14,7 +14,7 @@
           <ul class="home-messages">
             <% for (const message of messages) { %>
               <li>
-                  <%= message.user %> says: 
+                  <%= message.username %> says: 
                   <%= message.text %>
                   <a href="/message/<%= message.id %>" class="open">Open</a>
               </li>
